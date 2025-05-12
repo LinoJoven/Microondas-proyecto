@@ -3,18 +3,226 @@
 "type":"FeatureCollection",
 "Features": [
     {
-
         "type":"Feature",
         "geometry":{
             "type":"point",
-            "coordinates":[]
+            "coordinates":[4.6187767453621245, -74.08614486825977]
         },
 
-        "propierties":{
-
-
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
        }
-    
+
+       },
+
+        {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.601690258887568, -74.13378174228345]
+        },
+
+        "properties":{
+        "precioDescuento":439.900,
+        "precio": 479.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "CHALLEGER",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
+    },
+
+     {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.6187767453621245, -74.08614486825977]
+        },
+
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
+
+
+
+
+    },
+
+     {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.6187767453621245, -74.08614486825977]
+        },
+
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
+
+
+
+
+    },
+     {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.6187767453621245, -74.08614486825977]
+        },
+
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
+
+
+
+
+    },
+     {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.6187767453621245, -74.08614486825977]
+        },
+
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
+
+
+
+
+    },
+     {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.6187767453621245, -74.08614486825977]
+        },
+
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
+
+
+
+
+    },
+     {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.6187767453621245, -74.08614486825977]
+        },
+
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
+
+
+
+
+    },
+     {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.6187767453621245, -74.08614486825977]
+        },
+
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"34 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
+
+
+
+
+    },
+     {
+        "type":"Feature",
+        "geometry":{
+            "type":"point",
+            "coordinates":[4.6187767453621245, -74.08614486825977]
+        },
+
+        "properties":{
+        "precioDescuento":259.900,
+        "precio": 449.900,
+        "alto": "26.2 cm",
+        "ancho": "45.2  cm",
+        "profundidad":"36 cm",
+        "capacidad": "0.7  Pies Cubicos",
+        "modelo": "ACROS",
+        "potencia": "700",
+        "voltaje": "110 V"
+       }
 
 
 
