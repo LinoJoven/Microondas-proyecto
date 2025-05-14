@@ -24,9 +24,10 @@ async function  cargarPuntos(){
 
  for(let i=0; i<9; i++){
 
-   let misCoordenadas= listaFeatures[i]["geometry"]["coordenates"];
-   var miMarcador= L.marker(misCoordenadas);
-   miMarcador.addTo(map);
+        let misCoordenadas= listaFeatures[i]["geometry"]["coordenates"];
+      var miMarcador= L.marker(misCoordenadas);
+      miMarcador.addTo(map);
+      console.log(i);  
 
        }
 
