@@ -27,18 +27,18 @@
         "type":"Feature",
         "geometry":{
             "type":"point",
-            "coordinates":[4.601690258887568, -74.13378174228345]
+            "coordinates":[4.654107056268092, -74.07797746656733]
         },
 
         "properties":{
         "precioDescuento":439.900,
         "precio": 479.900,
-        "alto": "26.2 cm",
-        "ancho": "45.2  cm",
-        "profundidad":"34 cm",
-        "capacidad": "0.7  Pies Cubicos",
+        "alto": "25,8 cm",
+        "ancho": "43,9 cm",
+        "profundidad":"33 cm",
+        "capacidad": "0.8  Pies Cubicos",
         "modelo": "CHALLEGER",
-        "potencia": "700",
+        "potencia": "1050",
         "voltaje": "110 V"
        }
     },
@@ -47,18 +47,18 @@
         "type":"Feature",
         "geometry":{
             "type":"point",
-            "coordinates":[4.6187767453621245, -74.08614486825977]
+            "coordinates":[4.642464296527173, -74.07462815358474]
         },
 
         "properties":{
-        "precioDescuento":259.900,
-        "precio": 449.900,
-        "alto": "26.2 cm",
-        "ancho": "45.2  cm",
-        "profundidad":"34 cm",
-        "capacidad": "0.7  Pies Cubicos",
-        "modelo": "ACROS",
-        "potencia": "700",
+        "precioDescuento":349.900,
+        "precio": 249.900,
+        "alto": "25.8 cm",
+        "ancho": "44 cm cm",
+        "profundidad":"33.4 cm",
+        "capacidad": "20 Litros",
+        "modelo": "RECCO",
+        "potencia": "1050",  
         "voltaje": "110 V"
        }
 
@@ -71,17 +71,17 @@
         "type":"Feature",
         "geometry":{
             "type":"point",
-            "coordinates":[4.6187767453621245, -74.08614486825977]
+            "coordinates":[4.642112055928257, -74.07311743768014]
         },
 
         "properties":{
-        "precioDescuento":259.900,
-        "precio": 449.900,
-        "alto": "26.2 cm",
-        "ancho": "45.2  cm",
-        "profundidad":"34 cm",
-        "capacidad": "0.7  Pies Cubicos",
-        "modelo": "ACROS",
+        "precioDescuento":369.900,
+        "precio": 279.900,
+        "alto": "29.4 cm",
+        "ancho": "49.6  cm",
+        "profundidad":"38.9 cm",
+        "capacidad": "17  Litros",
+        "modelo": "ELECTROLUX",
         "potencia": "700",
         "voltaje": "110 V"
        }
