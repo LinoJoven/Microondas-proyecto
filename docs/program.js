@@ -4,47 +4,38 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var marker = L.marker([4.628004720962233, -74.0659032806953]).addTo(map);
+// Eliminar este marcador si ya no lo necesitas, ya que los puntos del GeoJSON se añadirán.
+// var marker = L.marker([4.628004720962233, -74.0659032806953]).addTo(map);
 
-// Abrir el archivo Geojson 
-// Java se ejecuta de tal manera que si una linea de codigo se demora se pasa a la siguiente sin esperar
-//esto puede generar problemas cuando se requiere secuencialidad 
+async function cargarPuntos(){
+    var miArchivo = await fetch("microondas.geojson");
+    var datos = await miArchivo.json();
 
-async function  cargarPuntos(){
+    let listaFeatures = datos["features"]; 
+    for(let i = 0; i < listaFeatures.length; i++){ // Itera sobre todos los elementos de la lista
+        let feature = listaFeatures[i];
+        let misCoordenadas = feature["geometry"]["coordinates"];
+        let propiedades = feature["properties"];
 
- var miArchivo= await fetch("microondas.geojson");
+        // Crear el contenido del popup con las especificaciones
+        let popupContent = `
+            <b>Modelo:</b> ${propiedades.modelo}<br>
+            <b>Precio Descuento:</b> ${propiedades.precioDescuento}<br>
+            <b>Precio:</b> ${propiedades.precio}<br>
+            <b>Alto:</b> ${propiedades.alto}<br>
+            <b>Ancho:</b> ${propiedades.ancho}<br>
+            <b>Profundidad:</b> ${propiedades.profundidad}<br>
+            <b>Capacidad:</b> ${propiedades.capacidad}<br>
+            <b>Potencia:</b> ${propiedades.potencia}<br>
+            <b>Voltaje:</b> ${propiedades.voltaje}
+        `;
 
-  //convertir el contenido a json: objeto js 
+        var miMarcador = L.marker(misCoordenadas);
+        miMarcador.addTo(map).bindPopup(popupContent); // Adjuntar el popup al marcador
 
-  var datos= await miArchivo.json();
+        console.log(i);  
+    }
+}
 
- //obtener el arreglo de la llave features que es un conjunto de objetos tipo feature
-
-  let listaFeatures= datos["features"]; 
-  for(let i=0; i<=9; i++){
-
-      let misCoordenadas= listaFeatures[i]["geometry"]["coordinates"];
-      var miMarcador= L.marker(misCoordenadas);
-      miMarcador.addTo(map);
-
-
-console.log(i);  
-
-       }
-
-};
 cargarPuntos();
 
-var marker = L.marker([4.6187767453621245, -74.08614486825977],
-  {alt: 'Kyiv'}).addTo(map) 
-  .bindPopup( 
-       {
- "precioDescuento":259.900,
-   "precio": 449.900,
-  "alto": "26.2 cm",
-   "ancho": "45.2  cm",
- "profundidad":"34 cm",
-   "capacidad": "0.7  Pies Cubicos",
-   "modelo": "ACROS",
- "potencia": "700",
-   "voltaje": "110 V"});

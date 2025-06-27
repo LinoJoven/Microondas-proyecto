@@ -1,1 +1,351 @@
-#map { height: 60%; }
+/* Variables CSS para una gestión de colores más fácil */
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro elegante */
+    --secondary-color: #3498db; /* Azul cielo vibrante */
+    --accent-color: #f39c12; /* Naranja/Amarillo para detalles */
+    --text-dark: #34495e; /* Gris oscuro para texto principal */
+    --text-light: #ecf0f1; /* Gris claro para texto en fondos oscuros */
+    --bg-light: #f4f7f6; /* Fondo general muy claro */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Fuente para el cuerpo */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+    line-height: 1.6; /* Mejor legibilidad */
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%); /* Degradado elegante */
+    color: var(--text-light);
+    padding-top: 3rem; /* Más padding arriba */
+    padding-bottom: 0; /* padding se manejará por la nav */
+    text-align: center;
+    box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif; /* Fuente destacada para el título */
+    margin: 0 0 0.5rem 0; /* Margen inferior para separar del subtítulo */
+    font-size: 3.2em; /* Título más grande */
+    letter-spacing: 1.5px;
+    text-transform: uppercase; /* Mayúsculas para un impacto */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra sutil para el texto */
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-top: 0;
+    margin-bottom: 2rem; /* Espacio antes de la navegación */
+    max-width: 700px; /* Limita el ancho del subtítulo */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo semi-transparente para la barra de navegación */
+    padding: 1rem 0;
+    width: 100%; /* Ocupa todo el ancho del header */
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para alinear los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos de la navegación */
+}
+
+nav ul li {
+    margin: 0 1.5rem; /* Espacio entre los elementos de la lista */
+}
+
+nav ul li a {
+    color: var(--text-light); /* Color de texto claro */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 600; /* Texto semi-negrita */
+    font-size: 1.1em;
+    padding: 0.5rem 1rem; /* Padding para hacer el área clickeable más grande */
+    border-radius: 5px; /* Esquinas ligeramente redondeadas */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--secondary-color); /* Fondo al pasar el ratón */
+    color: var(--primary-color); /* Texto más oscuro al pasar el ratón */
+}
+
+/* Main Content Area (Centrado del contenido principal) */
+main {
+    flex-grow: 1; /* Permite que ocupe el espacio restante */
+    padding: 2.5rem 0; /* Padding vertical, horizontal se maneja por .content-page */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido dentro de main */
+    align-items: flex-start; /* Alinea el contenido al inicio (arriba) del espacio disponible del main */
+}
+
+/* Estilos específicos para las páginas de contenido (no el mapa) */
+.content-page {
+    width: 100%;
+    max-width: 900px; /* Define un ancho máximo para el contenido */
+    padding: 0 1.5rem; /* Padding interno para que el contenido no toque los bordes en móviles */
+    
+    display: flex; /* ¡Convertir en un flex container! */
+    flex-direction: column; /* Apilar los elementos hijos verticalmente */
+    align-items: center; /* ¡Centrar los elementos hijos horizontalmente dentro de .content-page! */
+}
+
+.content-page h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+}
+
+.content-page p {
+    margin-bottom: 1rem;
+    max-width: 700px; /* Limita el ancho de los párrafos para legibilidad */
+    text-align: justify; /* Justifica el texto para una apariencia más limpia */
+}
+
+.content-page ul {
+    list-style: none; /* Quitar puntos de lista predeterminados */
+    padding: 0;
+    margin-top: 1.5rem;
+    text-align: left; /* Alinea los ítems de la lista a la izquierda dentro del UL centrado */
+    width: 100%;
+    max-width: 500px;
+}
+
+.content-page ul li {
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+}
+
+.content-page ul li strong {
+    color: var(--secondary-color);
+}
+
+
+/* Product Grid (para modelos.html) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 25px; /* Espacio entre tarjetas */
+    width: 100%; /* Asegura que la grilla ocupe el 100% de .content-page */
+    max-width: 1100px; /* Opcional: si quieres que la grilla no crezca indefinidamente */
+    margin-top: 2rem; /* Mantener margen superior */
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow-light);
+    padding: 25px;
+    text-align: left; /* Alinea el texto de la tarjeta a la izquierda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+    box-shadow: 0 8px 30px var(--shadow-medium);
+}
+
+.product-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.product-card p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.product-card ul {
+    list-style: disc; /* Vuelve a usar puntos para las listas de especificaciones */
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.product-card ul li {
+    margin-bottom: 5px;
+}
+
+.product-card button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #e08e0b; /* Un tono más oscuro de accent-color */
+}
+
+/* Estilo para las imágenes de producto */
+.product-image {
+    max-width: 100%; /* Asegura que la imagen no se desborde de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes ligeramente redondeados para la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+    display: block; /* Para que margin: auto funcione si la imagen es más pequeña */
+    margin-left: auto;
+    margin-right: auto; /* Centra la imagen dentro de la tarjeta */
+}
+
+
+/* Contact Form (para contacto.html) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 2rem; /* Mantener margen superior */
+    text-align: left; /* Alinea etiquetas y campos a la izquierda */
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px;
+}
+
+.contact-form button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Centra el botón en el formulario */
+    width: auto;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #2a7cbd; /* Un tono más oscuro del secondary-color */
+}
+
+
+/* Map Styling */
+#map {
+    height: 600px; /* Altura generosa para el mapa */
+    width: 90%; /* Ancho responsive */
+    max-width: 1000px; /* Ancho máximo para pantallas grandes */
+    border-radius: 12px; /* Esquinas más redondeadas */
+    box-shadow: 0 8px 25px var(--shadow-medium); /* Sombra más pronunciada */
+    border: none; /* Eliminar borde si la sombra ya es suficiente */
+    overflow: hidden; /* Asegura que las esquinas redondeadas funcionen bien */
+}
+
+/* Leaflet Popup Customization */
+.leaflet-popup-content-wrapper {
+    border-radius: 10px; /* Popups más redondeados */
+    background-color: white;
+    box-shadow: 0 4px 15px var(--shadow-light); /* Sombra para el popup */
+    padding: 0; /* Eliminar padding por defecto del wrapper */
+}
+
+.leaflet-popup-content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+    line-height: 1.5;
+    padding: 15px; /* Padding interno del contenido del popup */
+    color: var(--text-dark);
+}
+
+.leaflet-popup-content b {
+    color: var(--primary-color); /* Color primario para las etiquetas */
+    font-weight: 600; /* Un poco más de peso para las etiquetas */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Reducir tamaño del título en pantallas pequeñas */
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav ul li {
+        margin: 0 0.8rem; /* Reducir espacio entre elementos de navegación */
+    }
+
+    nav ul li a {
+        font-size: 0.95em;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #map {
+        height: 450px; /* Reducir altura del mapa en móviles */
+        width: 95%; /* Ocupar casi todo el ancho */
+    }
+
+    main {
+        padding: 1rem 0; /* Ajustar padding para móviles */
+    }
+
+    .content-page {
+        padding: 0 1rem; /* Ajusta padding para contenido en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 2rem 1rem;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    nav ul {
+        flex-direction: column; /* Apilar elementos de navegación en pantallas muy pequeñas */
+        align-items: center; /* Centrar elementos apilados */
+    }
+    nav ul li {
+        margin: 0.5rem 0; /* Espacio vertical entre elementos apilados */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+}
